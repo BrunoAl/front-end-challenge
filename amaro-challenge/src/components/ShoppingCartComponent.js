@@ -152,7 +152,7 @@ class ShoppingCart extends Component {
           return (
             <div key={id} className="item">
               <div className="buttons">
-                <i className="fa fa-trash-o" aria-hidden="true" onClick={() => this.props.removeProductFromCart(currProduct.product.name, currProduct.size)}></i>
+                <i className="fa fa-trash-o" id="trash" aria-hidden="true" onClick={() => this.props.removeProductFromCart(currProduct.product.name, currProduct.size)}></i>
               </div>
               <div className="image">
                 <img src={currProduct.product.image} alt={currProduct.product.name} />
@@ -163,9 +163,9 @@ class ShoppingCart extends Component {
                 <span>{`tam: ${currProduct.size}`}</span>
               </div>
               <div className="quantity">
-                <i style={{cursor: "pointer"}} className="fa fa-minus" aria-hidden="true" onClick={() => this.props.addProductToCart(currProduct.product, -1, currProduct.size)}></i>
+                <i style={{cursor: "pointer"}} id="minus" className="fa fa-minus" aria-hidden="true" onClick={() => this.props.addProductToCart(currProduct.product, -1, currProduct.size)}></i>
                 <input type="text" name="name" value={currProduct.quantity} readOnly/>
-                <i style={{cursor: "pointer"}} className="fa fa-plus" aria-hidden="true" onClick={() => this.props.addProductToCart(currProduct.product, 1, currProduct.size)}></i>
+                <i style={{cursor: "pointer"}} id="plus" className="fa fa-plus" aria-hidden="true" onClick={() => this.props.addProductToCart(currProduct.product, 1, currProduct.size)}></i>
               </div>
               <div className="price">{currProduct.product.actual_price}</div>
             </div>

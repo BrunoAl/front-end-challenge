@@ -184,7 +184,7 @@ class ProductCard extends Component {
           }
 
           <div className="addToCard">
-            <span onClick={() => this.hendleAddToCart(product, 1, this.state.sizeChosen) }>Add to cart</span>
+            <span onClick={() => this.hendleAddToCart(product, 1, this.state.sizeChosen) }>ADD TO CART</span>
           </div>
         </div>
       </ProductDiv>

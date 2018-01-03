@@ -11,12 +11,13 @@
     "styled-components": "^2.1.0"
   },
   "devDependencies": {
+    "cypress": "^1.4.1",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node_modules/.bin/cypress open",
     "eject": "react-scripts eject"
   }
 }

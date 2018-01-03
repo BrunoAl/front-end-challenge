@@ -89,12 +89,12 @@ class Header extends Component {
         <HeaderDiv style={isTopBarFixed ? lockTopBarStyle : null}>
           <ul>
             <Link to ="/catalog">
-              <li className="catalog" onClick={() => this.setState({catalogSelected: true})}>
+              <li className="catalog" id="catalog" onClick={() => this.setState({catalogSelected: true})}>
                 <a className={pathname === '/catalog' ? "active" : null}>Catalog</a>
               </li>
             </Link>
             <Link to ="/shoppingCart">
-              <li className="cart" onClick={() => this.setState({catalogSelected: false})}>
+              <li className="cart" id="cart" onClick={() => this.setState({catalogSelected: false})}>
                 <a><i className="fa fa-shopping-bag" aria-hidden="true"></i>{cartProductsQuantity}</a>
               </li>
             </Link>
